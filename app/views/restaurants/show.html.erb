@@ -6,3 +6,8 @@
 <%# <%= link_to 'Delete', delete_restaurant_path(@restaurant) | %>
 <p><%= link_to 'Write review', new_restaurant_review_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %> | </p>
+
+<h3>Reviews</h3>
+<% @restaurant.reviews.each do |review| %>
+  <p><%= "#{review.content}, #{review.rating}" %></p>
+<% end %>
